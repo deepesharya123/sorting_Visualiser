@@ -31,7 +31,6 @@ function App() {
     setSortedIndex([]);
 
     const randomArray = Array.from(Array(len + 1).keys()).slice(1);
-    console.log(randomArray);
     for (let i = randomArray.length - 1; i > 0; i--) {
       const randomIndex = Math.floor(Math.random() * (i - 1));
       const temp = randomArray[i];
