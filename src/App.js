@@ -13,25 +13,6 @@ import mergeSort from "./algorithms/mergeSort";
 import quickSort from "./algorithms/quickSort";
 
 function App() {
-  // Generating shuffled array of 1 to len
-  const generateRandomArray = (len) => {
-    setCompleted(false);
-    setSorting(false);
-    setSortedIndex([]);
-
-    const randomArray = Array.from(Array(len + 1).keys()).slice(1);
-
-    for (let i = randomArray.length - 1; i > 0; i--) {
-      const randomIndex = Math.floor(Math.random() * (i - 1));
-      const temp = randomArray[i];
-
-      randomArray[i] = randomArray[randomIndex];
-      randomArray[randomIndex] = temp;
-    }
-
-    setBlocks(randomArray);
-  };
-
   // States
   const [algo, setAlgo] = useState("bubbleSort");
   const [len, setLength] = useState(30);
@@ -42,6 +23,25 @@ function App() {
   const [compare, setCompare] = useState([]);
   const [swap, setSwap] = useState([]);
   const [sortedIndex, setSortedIndex] = useState([]);
+
+  // Generating shuffled array of 1 to len
+  const generateRandomArray = (len) => {
+    setCompleted(false);
+    setSorting(false);
+    setSortedIndex([]);
+
+    const randomArray = Array.from(Array(len + 1).keys()).slice(1);
+    console.log(randomArray);
+    for (let i = randomArray.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i - 1));
+      const temp = randomArray[i];
+
+      randomArray[i] = randomArray[randomIndex];
+      randomArray[randomIndex] = temp;
+    }
+
+    setBlocks(randomArray);
+  };
 
   // Generating random array every time the length is changed by th user
   useEffect(() => {
