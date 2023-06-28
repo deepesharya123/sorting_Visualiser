@@ -5,7 +5,7 @@ This application is created using React for visualizing classic sorting algorith
 ## Setup and commands to run
 
 ```
-  $ git clone https://github.com/Shubh1815/Sorting-Visualizer.git
+  $ git clone https://github.com/deepesharya123/sorting_Visualiser
   $ cd sorting-visualizer
   $ npm install
   $ npm start
